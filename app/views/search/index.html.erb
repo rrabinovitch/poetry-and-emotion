@@ -1,9 +1,9 @@
 <h2>Search Results</h2>
-<% @first_ten_poems.each do |poem| %>
+<% @poems.each do |poem| %>
   <section class="poem">
-    <h3 class="title"><%= poem[:title] %></h3>
-    <p class="author"><%= poem[:author] %></p>
-    <p class="poem-text"><%= poem[:lines].join('; ') %></p>
+    <h3 class="title"><%= poem.title %></h3>
+    <p class="author"><%= poem.author %></p>
+    <p class="poem-text"><%= poem.full_text %></p>
     <p class="tone"></p>
   </section>
 <% end %>
