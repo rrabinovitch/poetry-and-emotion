@@ -3,7 +3,11 @@
   <section class="poem">
     <h3 class="title"><%= poem.title %></h3>
     <p class="author"><%= poem.author %></p>
-    <p class="poem-text"><%= poem.full_text %></p>
+    <p class="poem-text">
+      <% poem.lines.each do |line| %>
+        <%= line %><br>
+      <% end %>
+    </p>
     <p class="tone"></p>
   </section>
 <% end %>

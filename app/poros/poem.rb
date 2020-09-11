@@ -6,8 +6,4 @@ class Poem
     @author = poem_data[:author]
     @lines = poem_data[:lines]
   end
-
-  def full_text
-    @lines.join('\n')
-  end
 end
