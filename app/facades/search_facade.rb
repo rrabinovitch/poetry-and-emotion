@@ -1,6 +1,9 @@
 class SearchFacade
     def self.get_poems_by_author(author)
-      binding.pry
+      poems = poems_service.find_poems_by_author(author)
+      @poems = poems.map do |poem_data|
+        Poem.new(poem)
+      end
     end
 
     def self.poems_service
